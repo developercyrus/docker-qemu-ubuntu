@@ -13,6 +13,12 @@ sudo docker run --detach -p 2222:2222 -v ~/qemu-data:/data --name qemu-ubuntu de
 # troubleshooting
 sudo docker logs -f qemu-ubuntu
 
+# subsequent run
+sudo docker stop qemu-ubuntu
+sudo docker start qemu-ubuntu
+
 # ssh
 ssh -p 2222 -i id_rsa ubuntu@localhost
+
+
 ```
